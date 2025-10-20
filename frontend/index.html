@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💝 Emotional Support Partner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💝 Your Emotional Support Partner</h1>
+            <p class="subtitle">Unconditional love and support, delivered via email</p>
+        </header>
+
+        <!-- Registration Section -->
+        <section id="registration-section" class="section">
+            <h2>New User Registration</h2>
+            <p class="info-text">Register to receive emotional support via email</p>
+            
+            <form id="registration-form">
+                <div class="form-group">
+                    <label for="reg-email">Email Address *</label>
+                    <input type="email" id="reg-email" required 
+                           placeholder="your.email@example.com">
+                    <small>Use the email you'll send messages from</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-name">Name *</label>
+                    <input type="text" id="reg-name" required 
+                           placeholder="Your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-occupation">Occupation / Profession *</label>
+                    <input type="text" id="reg-occupation" required 
+                           placeholder="e.g., Software Engineer, Teacher, Student">
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-interests">Interests *</label>
+                    <input type="text" id="reg-interests" required 
+                           placeholder="e.g., Reading, Technology, Art">
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-hobbies">Hobbies *</label>
+                    <input type="text" id="reg-hobbies" required 
+                           placeholder="e.g., Hiking, Cooking, Photography">
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-personality">Personality *</label>
+                    <textarea id="reg-personality" rows="3" required 
+                              placeholder="Describe yourself... e.g., Introverted, thoughtful, creative"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+
+            <div id="registration-message" class="message"></div>
+        </section>
+
+        <!-- Divider -->
+        <div class="divider">
+            <span>OR</span>
+        </div>
+
+        <!-- History Viewer Section -->
+        <section id="history-section" class="section">
+            <h2>View Your Conversation History</h2>
+            <p class="info-text">Enter your email to see your conversation</p>
+            
+            <form id="history-form">
+                <div class="form-group form-inline">
+                    <input type="email" id="history-email" required 
+                           placeholder="your.email@example.com">
+                    <button type="submit" class="btn btn-secondary">View History</button>
+                </div>
+            </form>
+
+            <div id="history-message" class="message"></div>
+
+            <!-- Conversation Display -->
+            <div id="conversation-container" class="conversation-container hidden">
+                <div class="conversation-header">
+                    <h3>Conversation with <span id="user-name"></span></h3>
+                    <p class="bot-info">Your conversation history with your support partner</p>
+                </div>
+                <div id="conversation-list" class="conversation-list">
+                    <!-- Messages will be inserted here -->
+                </div>
+                <div class="conversation-footer">
+                    <p>💌 Send an email to your support partner to continue your conversation</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Your conversations are private and stored securely.</p>
+        <p><a href="https://github.com/Yang-YZ/tempted/issues" target="_blank" rel="noopener noreferrer">Report an Issue</a></p>
+    </footer>
+
+    <script>
+        // Backend URL configuration
+        // For local development: uses localhost
+        // For production: update this URL after deploying backend
+        window.API_BASE_URL = 'http://localhost:5000/api';
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
+
